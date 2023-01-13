@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://i.pinimg.com/originals/7e/71/ed/7e71ed9103100d690a2e066cfcfd2b39.gif" alt="">
+    <script>
+        let img = document.querySelector('img')
+        document.addEventListener('mousemove', function (e) {
+            // 不断得到当前的鼠标坐标
+            // console.log(e.pageX)
+            // console.log(e.pageY)
+            // 把坐标给图片
+            // img.style.left = '100px'
+            //don't forget 'px'
+            img.style.left = e.pageX - 300 + 'px'
+            img.style.top = e.pageY - 230 + 'px'
+        })
+    </script>
+</body>
+
+</html>
