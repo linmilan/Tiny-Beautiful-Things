@@ -6,12 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+ li {
+    width: 30px;
+    height: 25px;
+    background-color: rgb(199, 167, 167);
+    list-style: none;
+    margin-left: 5px;
+    text-align: center;
+    float: left;
+    color: rgb(48, 19, 76);
+    cursor: pointer;
+    
+ }   
+  
+.active {
+    background-color: rgb(224, 115, 115);
+}
+
+</style>
 <body>
 
-    <label for="">
-        Male<input type="radio">
-        Female<input type="radio" checked>
-    </label>
+    <ul>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
     
+   <script>
+
+   const color=()=> {
+    
+            document.querySelector('.active').classList.remove('active')
+            lis[i].classList.add('active')
+        
+   }
+
+     let lis = document.querySelectorAll('li')
+
+     for ( let i =0 ; i < lis.length; i++) {
+        lis[i].addEventListener('click', color)
+     }
+    
+   </script> 
 </body>
+
 </html>
